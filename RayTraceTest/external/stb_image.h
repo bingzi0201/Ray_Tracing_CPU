@@ -2201,7 +2201,7 @@ static const stbi_uc stbi__jpeg_dezigzag[64+15] =
    29, 22, 15, 23, 30, 37, 44, 51,
    58, 59, 52, 45, 38, 31, 39, 46,
    53, 60, 61, 54, 47, 55, 62, 63,
-   // let corrupt input sample past end
+   // let corrupt input Sample past end
    63, 63, 63, 63, 63, 63, 63, 63,
    63, 63, 63, 63, 63, 63, 63
 };
@@ -3479,7 +3479,7 @@ static stbi_uc*  stbi__resample_row_h_2(stbi_uc *out, stbi_uc *in_near, stbi_uc 
    stbi_uc *input = in_near;
 
    if (w == 1) {
-      // if only one sample, can't do any interpolation
+      // if only one Sample, can't do any interpolation
       out[0] = out[1] = input[0];
       return out;
    }
@@ -4748,7 +4748,7 @@ static int stbi__create_png_image_raw(stbi__png *a, stbi_uc *raw, stbi__uint32 r
          break;
       }
 
-      // if first row, use special filter that doesn't sample previous row
+      // if first row, use special filter that doesn't Sample previous row
       if (j == 0) filter = first_row_filter[filter];
 
       // perform actual filtering
